@@ -1,4 +1,24 @@
+@keyframes spinningOriginalOmnitrixAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes reverseSpinningOriginalOmnitrixAnimation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
 .original-watch-prototype {
+  perspective: 300px;
+
   .black-middle-square {
     background-color: #000;
     height: 350px;
@@ -6,6 +26,8 @@
     align-items: center;
     display: flex;
     justify-content: center;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(45deg);
 
     .gray-rounded-circle {
       background-color: #393939;
@@ -17,6 +39,7 @@
       justify-content: center;
 
       .small-black-rounded-circle {
+        animation: spinningOriginalOmnitrixAnimation 1.5s infinite;
         background-color: #000;
         border-radius: 100%;
         height: 75%;
@@ -27,7 +50,7 @@
         justify-content: center;
 
         .small-green-circle {
-          background-image: linear-gradient(#dadfd9 1%, #91ff0c 45%, #347b00);
+          background-color: #94fb1b;
           border: 4px solid #646064;
           border-radius: 50%;
           cursor: pointer;
@@ -58,6 +81,7 @@
         }
 
         .small-gray-rounded-circle {
+          animation: reverseSpinningOriginalOmnitrixAnimation 1.5s infinite;
           background-color: #a3a59b;
           border-radius: 50%;
           height: 80%;

@@ -1,87 +1,105 @@
-.original-watch-prototype .black-middle-square {
-  background-color: #000;
-  height: 350px;
-  width: 300px;
-  align-items: center;
-  display: flex;
-  justify-content: center; }
-  .original-watch-prototype .black-middle-square .gray-rounded-circle {
-    background-color: #393939;
-    border-radius: 100%;
-    height: 75%;
-    width: 85%;
+@keyframes spinningOriginalOmnitrixAnimation {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(90deg); } }
+
+@keyframes reverseSpinningOriginalOmnitrixAnimation {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(-90deg); } }
+
+.original-watch-prototype {
+  perspective: 300px; }
+  .original-watch-prototype .black-middle-square {
+    background-color: #000;
+    height: 350px;
+    width: 300px;
     align-items: center;
     display: flex;
-    justify-content: center; }
-    .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle {
-      background-color: #000;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(45deg); }
+    .original-watch-prototype .black-middle-square .gray-rounded-circle {
+      background-color: #393939;
       border-radius: 100%;
       height: 75%;
-      position: relative;
-      width: 75%;
+      width: 85%;
       align-items: center;
       display: flex;
       justify-content: center; }
-      .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle {
-        background-image: linear-gradient(#dadfd9 1%, #91ff0c 45%, #347b00);
-        border: 4px solid #646064;
-        border-radius: 50%;
-        cursor: pointer;
-        height: 30px;
-        position: absolute;
-        transform: translate(-50%, -50%);
-        width: 30px; }
-        .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle:nth-child(1) {
-          left: 0;
-          top: 50%; }
-        .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle:nth-child(2) {
-          left: 50%;
-          top: 0; }
-        .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle:nth-child(3) {
-          top: 50%;
-          right: -15%; }
-        .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle:nth-child(4) {
-          bottom: -15%;
-          left: 50%; }
-      .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle {
-        background-color: #a3a59b;
-        border-radius: 50%;
-        height: 80%;
-        width: 80%;
+      .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle {
+        animation: spinningOriginalOmnitrixAnimation 1.5s infinite;
+        background-color: #000;
+        border-radius: 100%;
+        height: 75%;
+        position: relative;
+        width: 75%;
         align-items: center;
         display: flex;
         justify-content: center; }
-        .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background {
+        .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle {
           background-color: #94fb1b;
+          border: 4px solid #646064;
+          border-radius: 50%;
+          cursor: pointer;
+          height: 30px;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          width: 30px; }
+          .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle:nth-child(1) {
+            left: 0;
+            top: 50%; }
+          .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle:nth-child(2) {
+            left: 50%;
+            top: 0; }
+          .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle:nth-child(3) {
+            top: 50%;
+            right: -15%; }
+          .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-green-circle:nth-child(4) {
+            bottom: -15%;
+            left: 50%; }
+        .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle {
+          animation: reverseSpinningOriginalOmnitrixAnimation 1.5s infinite;
+          background-color: #a3a59b;
           border-radius: 50%;
           height: 80%;
-          position: relative;
-          width: 80%; }
-          .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .black-border-for-gray-triangle {
-            border: 59px solid transparent;
-            border-radius: 48.6%;
-            height: 0;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0; }
-            .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .black-border-for-gray-triangle.left {
-              border-left-color: #000;
-              left: 0; }
-            .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .black-border-for-gray-triangle.right {
-              border-right-color: #000;
-              right: 0; }
-          .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .gray-triangle {
-            border: 50px solid transparent;
-            border-radius: 45%;
-            height: 0;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 0; }
-            .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .gray-triangle.left {
-              border-left-color: #5d5d5d;
-              left: 0; }
-            .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .gray-triangle.right {
-              border-right-color: #5d5d5d;
-              right: 0; }
+          width: 80%;
+          align-items: center;
+          display: flex;
+          justify-content: center; }
+          .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background {
+            background-color: #94fb1b;
+            border-radius: 50%;
+            height: 80%;
+            position: relative;
+            width: 80%; }
+            .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .black-border-for-gray-triangle {
+              border: 59px solid transparent;
+              border-radius: 48.6%;
+              height: 0;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 0; }
+              .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .black-border-for-gray-triangle.left {
+                border-left-color: #000;
+                left: 0; }
+              .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .black-border-for-gray-triangle.right {
+                border-right-color: #000;
+                right: 0; }
+            .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .gray-triangle {
+              border: 50px solid transparent;
+              border-radius: 45%;
+              height: 0;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 0; }
+              .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .gray-triangle.left {
+                border-left-color: #5d5d5d;
+                left: 0; }
+              .original-watch-prototype .black-middle-square .gray-rounded-circle .small-black-rounded-circle .small-gray-rounded-circle .display-background .gray-triangle.right {
+                border-right-color: #5d5d5d;
+                right: 0; }
